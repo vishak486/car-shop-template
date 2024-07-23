@@ -1,0 +1,407 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.nav-style{
+    width: 100%;
+    height: 110px;
+    background-color: black;
+    z-index: 1000; /* Ensure the navbar is on top */
+    position: relative; /* Ensure z-index works */
+}
+
+.navbar .navbar-brand.nav-head{
+    font-weight: 900;
+    font-size: 20px;
+    font-family: "Playwrite BE VLG", cursive;
+    color: black;
+}
+.nav-link-style .nav-link{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    font-family: "Nunito Sans", sans-serif;
+}
+/* home */
+#home{
+    position: relative;
+    margin: 0px 0px 5% 0px;
+    z-index: 1;
+}
+.carosel-height{
+    height: 88vh;
+}
+.carosel-height img{
+    width: 100%;
+    object-fit: cover;
+}
+#home .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    font-family: "Playwrite BE VLG", cursive;
+  }
+.overlay-text h1{
+    font-size: 60px;
+    font-weight: 800;
+}
+.overlay-text p{
+    font-size: 25px;
+}
+/* about */
+.about
+{
+    margin: 5% 0px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about-content{
+    text-align: center;
+    
+}
+.about-content h2{
+    font-family: "Playwrite BE VLG", cursive;
+    padding-top: 20px;
+}
+.about-icon{
+    width: 100px;
+}
+/* books */
+.book-head h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    /* font-family: "Playwrite BE VLG", cursive; */
+}
+.card-height{
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    /* height: 80rem; */
+}
+.card-height img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.card-body-height{
+    height: 200px;
+    overflow: auto;
+}
+/* contact */
+#test{
+    margin-top: 5%;
+}
+.test{
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
+    width: 100%;
+    /* height: 100%; */
+    gap: 0%;
+}
+.test-part{
+    width: 50%;
+    background-color: rgb(142, 196, 232);
+    /* border: 1px solid; */
+}
+.test-img{
+    width: 50%;
+}
+.test-img img{
+    width: 100%
+}
+.test-head{
+    /* text-align: center; */
+    margin-left: 100px;
+    margin-top: 120px;
+    padding-bottom: 10px;
+}
+.test-para{
+    margin-left: 100px;
+    /* margin-top: 100px; */
+    text-align: justify;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    font-family: "Playwrite BE VLG", cursive;
+    font-size: 20px;
+    font-weight: 700;
+}
+.learn-btn{
+    margin-left: 100px;
+    text-decoration: none;
+    width: 160px;
+    height:100px;
+    padding: 10px;
+    color: aliceblue;
+    background-color: blue;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.learn-btn:hover{
+    background-color: red;
+}
+.test-btn{
+    margin-left: 50%;
+}
+/* question */
+#question{
+    margin: 5% 5% 5% 5%;
+}
+
+/* footer */
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom right,red,green,blue);
+}
+.brands{
+    color: black;
+    font-size: 30px;
+}
+.icon:hover .brands{
+color: white;
+animation: rotate 3s;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(30deg);
+    }
+    20%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    60%{
+        transform: rotate(-30deg);
+    }
+    80%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}
+/* footer */
+footer{
+    margin-top: 5%;
+    height: 95px;
+    background-color: gainsboro;
+    
+}
+#copyright{
+    padding-top: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+.up-arrow{
+    float: right;
+    margin: -40px 30px 30px 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 15px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: antiquewhite;
+}
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 20px;
+}
+
+
+/* media  */
+
+@media (max-width: 1280px) {
+    .test {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .test-part,
+    .test-img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .test-img {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .test-img img {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        object-fit: cover;
+    }
+
+    .test-part {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .test-head,
+    .test-para,
+    .learn-btn {
+        margin: 15px 0; /* Adjust margins for spacing */
+    }
+
+    .test-para {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    
+}
+@media (max-width: 984px) {
+    .d-flex {
+        /* Add gap between cards */
+        gap: 20px; /* Adjust this value as needed */
+    }
+
+    .card-height {
+        width: 300px; /* Adjust width for smaller screens */
+        height: 350px; /* Adjust height if necessary */
+    }
+
+    .card-height img {
+        height: 250px; /* Adjust height to fit within the new card height */
+    }
+
+    .card-body-height {
+        height: auto; /* Allow card body to expand with content */
+    }
+}
+
+/* Media Query for screens up to 820px */
+@media (max-width: 820px) {
+
+        #Service {
+            margin-top: 10px; /* Adjust the top margin to reduce gap */
+        }
+    
+    .about {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        margin: 2% 0; /* Reduce top and bottom margins */
+        gap: 20px; /* Add gap between stacked items */
+    }
+
+    .about-content {
+        /* Adjust padding and margin for smaller screens if necessary */
+        padding: 10px;
+    }
+
+    .about-content h2 {
+        /* Adjust font size if needed */
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .about-icon {
+        /* Adjust icon size if needed */
+        width: 80px;
+    }
+}
+
+/* Media query for screen sizes 720px and below */
+@media (max-width: 720px) {
+    #home {
+        margin: 0; /* Remove margin to reduce gap */
+    }
+
+    .carosel-height {
+        height: 50vh; /* Reduce carousel height */
+    }
+
+    .carosel-height img {
+        height: auto; /* Ensure image fits the reduced carousel */
+    }
+
+    .overlay-text {
+        top: 40%; /* Adjust position to fit smaller carousel */
+        left: 50%;
+        transform: translate(-50%, -40%);
+        font-size: 18px; /* Reduce font size for better fit */
+    }
+
+    .overlay-text h1 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .overlay-text p {
+        font-size: 18px; /* Reduce paragraph size */
+    }
+}
+/* Media query for screen sizes 437px and below */
+@media (max-width: 437px) {
+    #home {
+        margin: 0; /* Ensure no extra margin */
+    }
+
+    .carosel-height {
+        height: 40vh; /* Further reduce carousel height */
+    }
+
+    .carosel-height img {
+        height: auto; /* Ensure image fits the reduced carousel */
+    }
+
+    .overlay-text {
+        top: 30%; /* Adjust position to fit smaller carousel */
+        left: 50%;
+        transform: translate(-50%, -30%);
+        font-size: 14px; /* Reduce font size for better fit */
+    }
+
+    .overlay-text h1 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .overlay-text p {
+        font-size: 14px; /* Reduce paragraph size */
+    }
+
+    .book-head h1 {
+        font-size: 30px; /* Reduce font size for smaller screens */
+    }
+    .test-para {
+        font-size: 16px; /* Reduce font size for better readability */
+        margin: 10px; /* Adjust margins if needed */
+    }
+}
+
+
+
